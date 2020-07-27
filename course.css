@@ -25,6 +25,13 @@
   background-color: #ff944d;
 }
 
+.shareIcon:hover .main > i {
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  -webkit-transform: rotateZ(720deg);
+          transform: rotateZ(720deg);
+}
+
 .shareIcon:hover a:not(.main) {
   visibility: visible;
 }
