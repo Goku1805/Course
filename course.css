@@ -4,6 +4,10 @@
           box-sizing: border-box;
 }
 
+.imagebox {
+  position: relative;
+}
+
 .container {
   width: 100%;
   height: auto;
