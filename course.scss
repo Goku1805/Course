@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap");
+
+@import "mixins.scss";
+
+$fontType: "Roboto", sans-serif;
+$fontType2: "Open Sans", sans-serif;
+$bgcol: lightgrey;
+$max: 12;
+$gutterWidth: 30px;
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+[class*="col-"] {
+  flex: 1 0 100%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  padding: 5px;
+  font-size: 10px;
+  font-family: $fontType;
+}
+.heading a {
+  text-decoration: none;
+  color: #000066;
+  font-weight: bold;
+  font-family: $fontType2;
+}
+.subject {
+  font-family: $fontType2;
+  font-size: 25px;
+  color: #3c3b37;
+}
+.details {
+  font-size: 10px;
+  font-family: $fontType;
+  display: flex;
+  justify-content: center;
+}
+.details i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+.detail1 {
+  display: flex;
+  margin: 10px;
+}
+.detail2 {
+  display: flex;
+  margin: 10px;
+}
+.detail3 {
+  display: flex;
+  margin: 10px;
+}
+button {
+  margin-top: 10px;
+  background-color: white;
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+  border-radius: 28px;
+  padding: 10px;
+  font-family: $fontType;
+}
+@for $i from 1 through $max {
+  .col-sm-#{$i} {
+    @include breakpoint(sm) {
+      $width: 100%/12;
+      padding: 0 #{$gutterWidth / 2};
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      text-align: center;
+    }
+  }
+}
+
+@for $i from 1 through $max {
+  .col-md-#{$i} {
+    @include breakpoint(md) {
+      $width: 100%/12;
+      padding: 0 #{$gutterWidth / 2};
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      text-align: center;
+    }
+  }
+}
+
+@for $i from 1 through $max {
+  .col-lg-#{$i} {
+    @include breakpoint(lg) {
+      $width: 100%/12;
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      padding: 0 #{$gutterWidth / 2};
+      text-align: center;
+    }
+  }
+}
