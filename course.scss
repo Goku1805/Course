@@ -13,9 +13,12 @@ $gutterWidth: 30px;
 .imagebox {
   position: relative;
 }
-
-.imagebox i {
-  position: relative;
+.shareIcon {
+  position: absolute;
+  transform: translateX(20px);
+  margin: -15px;
+}
+.shareIcon i {
   height: 30px;
   width: 30px;
   line-height: 30px;
@@ -24,10 +27,11 @@ $gutterWidth: 30px;
   color: white;
   background-color: #ff944d;
 }
-.imagebox > a:hover > .hide {
+.shareIcon:hover a:not(.main) {
   visibility: visible;
 }
-.hide {
+
+.shareIcon a:not(.main) {
   visibility: hidden;
 }
 

@@ -8,8 +8,14 @@
   position: relative;
 }
 
-.imagebox i {
-  position: relative;
+.shareIcon {
+  position: absolute;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  margin: -15px;
+}
+
+.shareIcon i {
   height: 30px;
   width: 30px;
   line-height: 30px;
@@ -19,11 +25,11 @@
   background-color: #ff944d;
 }
 
-.imagebox > a:hover > .hide {
+.shareIcon:hover a:not(.main) {
   visibility: visible;
 }
 
-.hide {
+.shareIcon a:not(.main) {
   visibility: hidden;
 }
 
