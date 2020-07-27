@@ -32,6 +32,14 @@ $gutterWidth: 30px;
   transition: 0.9s;
   transform: rotateZ(720deg);
 }
+.fb:hover > i {
+  transition: 0.9s;
+  transform: rotateZ(720deg);
+}
+.twit:hover > i {
+  transition: 0.9s;
+  transform: rotateZ(720deg);
+}
 .shareIcon:hover a:not(.main) {
   visibility: visible;
 }
